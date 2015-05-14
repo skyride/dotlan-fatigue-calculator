@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dotlan Fatigue Calculator",
+  "description": "This extension adds Phoebe Fatigue calculations to Dotlan's Jump Planner",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://evemaps.dotlan.net/jump/*/*"],
+      "css": ["style.css"],
+      "js": ["ships.js", "functions.js", "fatigue.js"]
+    }
+  ],
+  
+	"icons": {
+	  "16": "icon16.png",
+	  "48": "icon48.png",
+	  "96": "icon96.png",
+	  "128": "icon128.png"
+	},
+
+  "permissions": [
+    "http://evemaps.dotlan.net/"
+  ]
+}
