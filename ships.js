@@ -1,8 +1,8 @@
 var ships = {
-	"Panther": 0.75,
-	"Redeemer": 0.75,
-	"Sin": 0.75,
-	"Widow": 0.75,
+	"Panther": 0.25,
+	"Redeemer": 0.25,
+	"Sin": 0.25,
+	"Widow": 0.25,
 	"Rorqual": 0.1,
 	"Rorqual ORE Development Edition": 0.1,
 	"Archon": 1.0,
