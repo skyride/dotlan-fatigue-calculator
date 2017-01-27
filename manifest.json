@@ -23,4 +23,9 @@
   "permissions": [
     "http://evemaps.dotlan.net/"
   ]
+	"applications": {
+  "gecko": {
+    "id": "ext@example.org"
+  }
+}
 }
