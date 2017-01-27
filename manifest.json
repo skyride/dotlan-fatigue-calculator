@@ -1,7 +1,5 @@
 {
-
-
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Dotlan Fatigue Calculator",
   "description": "This extension adds Phoebe Fatigue calculations to Dotlan's Jump Planner",
   "version": "1.1",
