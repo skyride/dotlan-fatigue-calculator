@@ -1,9 +1,10 @@
-var jumptable;				//Reference to the main jump table
-var jumps = [];				//Ly distance of jumps
-var fatiguefactor = 1;		//Modifier granted from ship
-var prefatigues = [];		//Prefatigue value nodes
-var postfatigues = [];		//Postfatigue value nodes
-var reactivations = [];		//Reactivation value nodes
+var jumptable;					//Reference to the main jump table
+var jumps = [];					//Ly distance of jumps
+var fatiguefactor = 1;			//Modifier granted from ship
+var prefatigues = [];			//Prefatigue value nodes
+var postfatigues = [];			//Postfatigue value nodes
+var reactivations = [];			//Reactivation value nodes
+var fatiguecap = 5 * 60 * 60	//Jump fatigue cap
 
 
 function df_readJumps() {
@@ -127,7 +128,7 @@ function df_doCalcsInit() {
 					10 * (1 + (jumps[i] * fatiguefactor)),
 					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
 				) * 60,
-				432000
+				fatiguecap
 			)
 		);
 		
@@ -162,7 +163,8 @@ function df_doCalcsUpdate() {
 				Math.max(
 					10 * (1 + (jumps[i] * fatiguefactor)),
 					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
-				) * 60, 432000
+				) * 60,
+				fatiguecap
 			)
 		);
 		
