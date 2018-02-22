@@ -127,7 +127,7 @@ function df_doCalcsInit() {
 					10 * (1 + (jumps[i] * fatiguefactor)),
 					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
 				) * 60,
-				2592000
+				432000
 			)
 		);
 		
@@ -162,7 +162,7 @@ function df_doCalcsUpdate() {
 				Math.max(
 					10 * (1 + (jumps[i] * fatiguefactor)),
 					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
-				) * 60, 2592000
+				) * 60, 432000
 			)
 		);
 		
