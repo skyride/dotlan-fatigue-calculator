@@ -7,10 +7,10 @@ df_buildTableAdditions();
 //Run the initial calcs
 df_doCalcsInit();
 
-console.log(reactivations);
+//console.log(reactivations);
 
 //Test run the ref rebuild
 df_rebuildRefs();
 
-console.log(reactivations);
+//console.log(reactivations);
 df_doCalcsUpdate();
