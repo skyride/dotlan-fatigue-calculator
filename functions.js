@@ -117,8 +117,19 @@ function df_doCalcsInit() {
 	//Iterate through each jump
 	for(var i = 0; i < jumps.length; i++) {
 		//Calculate Reactivation and Fatigue
-		reactivation = Math.max(1 + (jumps[i] * fatiguefactor), (fatigue * 0.1) / 60) * 60;
-		fatigue = Math.floor(Math.min(Math.max(10 * (1 + (jumps[i] * fatiguefactor)), (fatigue / 60) * (1 + (jumps[i] * fatiguefactor))) * 60, 2592000));
+		reactivation = Math.max(
+			1 + (jumps[i] * fatiguefactor),
+			(fatigue * 0.1) / 60
+		) * 60;
+		fatigue = Math.floor(
+			Math.min(
+				Math.max(
+					10 * (1 + (jumps[i] * fatiguefactor)),
+					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
+				) * 60,
+				2592000
+			)
+		);
 		
 		//Update UI
 		postfatigues[i].nodeValue = df_formatTime(df_sToT(fatigue));
@@ -142,8 +153,18 @@ function df_doCalcsUpdate() {
 	//Iterate through each jump
 	for(var i = 0; i < jumps.length; i++) {
 		//Calculate Reactivation and Fatigue
-		reactivation = Math.max(1 + (jumps[i] * fatiguefactor), (fatigue * 0.1) / 60) * 60;
-		fatigue = Math.floor(Math.min(Math.max(10 * (1 + (jumps[i] * fatiguefactor)), (fatigue / 60) * (1 + (jumps[i] * fatiguefactor))) * 60, 2592000));
+		reactivation = Math.max(
+			1 + (jumps[i] * fatiguefactor),
+			(fatigue * 0.1) / 60
+		) * 60;
+		fatigue = Math.floor(
+			Math.min(
+				Math.max(
+					10 * (1 + (jumps[i] * fatiguefactor)),
+					(fatigue / 60) * (1 + (jumps[i] * fatiguefactor))
+				) * 60, 2592000
+			)
+		);
 		
 		//Update UI
 		postfatigues[i].nodeValue = df_formatTime(df_sToT(fatigue));
