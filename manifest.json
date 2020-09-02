@@ -20,7 +20,7 @@
 	},
 
   "permissions": [
-    "http://evemaps.dotlan.net/"
+    "https://evemaps.dotlan.net/"
   ]
 
 }
